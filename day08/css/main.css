@@ -65,6 +65,7 @@ header nav ul li a:hover{
          .illust :전체요소의 class명이 illust이면 */ 
     position: relative;     /* 하위요소의 포지션 기준점 */
 }
+/* p. 151~152 */
 .msgSec p.illust::before{
     content: url(../images/left\ leaf.png);
     position: absolute; left: 320px; bottom: -30px;
@@ -78,19 +79,56 @@ header nav ul li a:hover{
     background-color: #ffffff;
     padding-bottom: 120px;
 }
+/* p.154 */
 .dateSec .layoutWrap{display: flex;}
 .dateSec .layoutWrap > p{flex-basis: 735px;}
-.dateSec .layoutWrap > div{flex-basis: 465px; padding-top: 100px;}
+.dateSec .layoutWrap > div{flex-basis: 465px; padding-top: 100px;}/* p.155 */
 .dateSec .dateDetailSec{
-    font-size: 7px;
+    font-size: 72px;
     margin: 0 0 170px -100px;
     background-color: #ffffff;
     padding: 40px 64px;
     line-height: 1.2;
 }
 
+.word1{font-size: 50px;}
+.word2{font-size: 40px;}
+.word3{font-size: 60px;}
+.accessSec{margin-left: 48px;}
+.accessSec h3{
+    color: #cfafa3;
+    font-size: 55px;
+    letter-spacing: .05em;
+    margin-bottom: 8px;
+}
+.accessSec p {
+    line-height: 1.6;
+}
+.formSec{
+    background-color: #efe8d9;
+    padding-bottom: 60px;
+}
 
-
+form{
+    width: 600px;
+    margin: 0 auto;
+}
+input[type="text"],
+input[type="e-mail"],
+select,
+textarea {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 5ps;
+    padding: 4px 8px;
+}
+input[type="radio"],
+input[type="check"]{
+    width: 16px; height: 16px;
+    vertical-align: baseline;  
+    margin-right: 4px   
+}
 
 /* 
     p.150
@@ -106,6 +144,14 @@ header nav ul li a:hover{
         ::before        :요소 앞부분에 내용을 가상으로 넣어주기
         ::after         :요소 뒷부분에 내용을 가상으로 넣어주기
             content     : 가상 요소의 내용물
-        
+
+    flex-basis: 465px;
+        vs
+    width:465px;
+
+        차이점 : 1.flex-direction:colums일떄
+                with: 고정  flex-basis: 전체사이즈 늘어남
+                 2. 요소보다 더 큰 컨텐츠가 들어왔을때
+                width: 고정  flex-basis
 */
 
