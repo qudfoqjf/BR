@@ -1,14 +1,14 @@
 @charset "utf-8";
-body{
+*{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
     color: #121212;
 }
+a{text-decoration: none;}
 .ffJosefin{
     font-family: 'Josefin Sans ', sans-serif;
 }
 .innerWrap{/* p.139 */
-    border: 4px solid lightblue;
     width: 1240px; margin: 0 auto;
     padding: 80px 20px 0;
 }
@@ -38,9 +38,8 @@ header .scroll img{
 }
 header nav{
     position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
+    top:0; left: 0; width: 100%;
+    z-index: 100;
 }
 header nav ul{
     display: flex;
@@ -49,3 +48,64 @@ header nav ul{
     margin: 0 auto;
     padding: 10px 20px;
 }
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+.msgSec{
+    background-color: #fbfaf7;
+}
+.msgSec p {
+    text-align: center;
+    line-height: 1.75;
+    margin-bottom: 40px ;
+}
+.msgSec p.illust{
+    margin-top: 80px; margin-bottom: 0px;
+     /* p.illust :p요소의 class 명이 illust 
+         .illust :전체요소의 class명이 illust이면 */ 
+    position: relative;     /* 하위요소의 포지션 기준점 */
+}
+.msgSec p.illust::before{
+    content: url(../images/left\ leaf.png);
+    position: absolute; left: 320px; bottom: -30px;
+}
+.msgSec p.illust::after{
+    content: url(../images/rifgt\ leaf.png);
+    position: absolute; right: 320px; bottom: -30px;
+}
+
+.dateSec{
+    background-color: #ffffff;
+    padding-bottom: 120px;
+}
+.dateSec .layoutWrap{display: flex;}
+.dateSec .layoutWrap > p{flex-basis: 735px;}
+.dateSec .layoutWrap > div{flex-basis: 465px; padding-top: 100px;}
+.dateSec .dateDetailSec{
+    font-size: 7px;
+    margin: 0 0 170px -100px;
+    background-color: #ffffff;
+    padding: 40px 64px;
+    line-height: 1.2;
+}
+
+
+
+
+/* 
+    p.150
+    !important > style 속성 > id > class > 타입 > *
+        1. p{text-size: 16px !important;}
+        2. <div style="text-size:16px;>
+        3. #id{text-size: 16px;}
+        4. .class{text-size: 16px;}
+        5. p{text-size: 16px;}
+        6. *{ text-size:16ps;}
+    p.151~152: 가상요소 선택자
+        -HTML에 없던 내용물[주로 텍스트,이미지]를 css에서 넣어주는 속성
+        ::before        :요소 앞부분에 내용을 가상으로 넣어주기
+        ::after         :요소 뒷부분에 내용을 가상으로 넣어주기
+            content     : 가상 요소의 내용물
+        
+*/
+
