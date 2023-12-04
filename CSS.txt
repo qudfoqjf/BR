@@ -1,0 +1,127 @@
+
+CSS : 캐스팅 스타일 시트 (Cascading Style Sheets)
+    -HTML(뼈대) - HTTP
+    -CSS(스타일-옷)
+    -JS(행위/ 행동-이벤트)
+        -CSS와 JS는 html에 포함된 구조
+
+1. CSS 적용하는 방법
+    A. CSS파일을 만들어서 HTML에 호출하는 방식[*]
+        <linke rel="stylesheet" href
+    B. HTML <head>태그에 <style> 태그를 이용하는 방식
+    C. HTML <마크업 style=""> style속성을 이용하는 방식
+
+2. CSS 작성하는 방법 (*****)
+    어디의 {무엇을: 어떻게;}
+    A. 어디의{선택자}
+        1. *         : 모든 곳에 적용
+        2. 마크업     : 해당 마크업만 적용
+        3. class      :해당 class속성에 동일한 이름을 갖는 마크업에 적용
+        4. id         :해당 id속성에 동일한 이름을 갖는 마크업에 적용
+        *class명과 id명은 상관없음 [*권장: 영문,의미부여]
+        <input class = "titleInput">
+        <table id = "boardTable">
+
+        *식별자 우선순위 [동일한 속성이 겹쳤을 때]
+            * < 마크업 < class < id 
+
+3. CSS 속성 종류
+    A. background-color : 색상      : 배경색
+        background-image : url      : 배경이미지
+        background-repeat           : 여백이 있을경우 배경 반복 여부
+            repeat[기본값], repeat-x, repeat-y, no-repeat
+
+    ==========폰트 관련==========
+    B. font-family : 폰트명
+    C. font-size    : 폰트크기 [px:픽셀]
+    D. font-weight:bold : 진하게
+    E. font-style:italic : 기울기
+    F. color : 색상
+    G. word-spacing : 어간(단어간격)[px]
+    H. letter-spacing : 자간(글자간격) [px] 
+    I. line-height : 줄간격[%]
+    J. text-align : 텍스트 가로 정렬
+        left, right, center : 왼쪽, 오른쪽, 가운데
+    K. text-decoration : 텍스트 선긋기
+        line-through : 취소선
+        underline : 밑줄
+        overline : 윗줄
+    L. text-shadow : 텍스트 그림자
+        x축 y축 흐림정도 색상
+    M. list-style-type : 목록 사용시 글머리(목록의 마커 스타일)
+
+    =========박스 모델 관련========
+    1.border                        :테두리 두께 선종류 색상
+        border-top, border-right, border-bottom, border-left
+        *선종류
+        solid, dotted, double, dashed
+
+    2. padding
+        padding-top, padding-right, padding-bottom, padding-left
+
+    3. margin
+        margin-top, margin-right, margin-bottom, margin-left
+        margin: auto                    자동정렬
+    4. box-sizing               :안쪽 여백과 테두리를 사이즈에 포함여부
+    box-sizing: content-box: 포함 x
+    box-sizing: border box: 포함[*권장]
+
+    5. width                     : 가로사이즈
+
+    6. height                    : 세로사이즈
+
+    7. display                    : 배치 방법
+        display: inline;         : 한줄에 포함된 배치
+            마크업: <span>, <img>,<a> 등
+                width, height 적용불가
+
+        display: block;          :
+            마크업: <div>, <h>, <p>, <ul>, <ol>, <li> 등
+                width, height 적용가능
+
+        display: inline block;   : 한 줄에 포함되고 사이즈가 적용된 배치
+            inline+block
+                width, height 적용가능
+            
+
+        display: none;           : 표시 안함
+
+        display: flex;           : 하위요소들을 배치
+            1. flex-webWrap      : 하위요소 줄바꿈 여부
+                nowrap           : (기본값) 하위요소 줄바꿈 x
+                webWrap          : 하위요소 줄바꿈 ol
+                wrap-reverse     : 하위요소 줄바꿈O + 반대로
+
+            2. flex-direction    : 하위요소들의 배치 방향
+                row              : (기본값)하위요소들을 가로 배치
+                colum            : 하위요소들을 세로 배치
+                row-reverse      : 하위요소들을 가로 배치 + 반대로
+                colum-reverse    : 하위요소들을 세로 배치 + 반대로
+
+            3. justify-content   : 하위요소들을 가로정렬
+                flex-start       :(기본값) 왼쪽부터 정렬
+                flex-end         : 오른쪽부터 정렬
+                center           : 가운데 정렬
+                space-between    : 양쪽끝에 여백없이 사이 여백 균등 정렬
+                space-around     : 양쪽끝에 여백은 절반으로 하고 사이 여백 균등 정렬
+                space-evenly     : 양쪽끝에 여백과 사이 여백 균등 정렬
+
+            4. align-items       : 하위요소들을 세로 정렬
+                stretch          : (기본값) 자식요소가 컨테이너의 높이만큼 자동으로 늘어남
+                flex-start       : 윗변 정렬
+                flex-end         : 밑변 정렬
+                center           : 중앙 정렬
+                baseline         : 내용을 아래 기준으로 정렬
+    8. box-shadow : 박스모델 그림자
+        X축 Y축 흐림정도 색상
+
+    9. overflow                  : 하위요소가 상위요소(고정사이즈) 보다 커질때
+        visible[기본값], hidden, scroll, auto
+        overflow: 가로방향 세로방향;
+
+
+
+4. CSS 색상 표현하는 방법
+    A. 색상이름: red
+    B. 헥사코드: b6a54c
+    C. RGB색상: rgb(0~255, 0~255, 0~255)

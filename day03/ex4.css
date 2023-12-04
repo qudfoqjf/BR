@@ -1,0 +1,19 @@
+span{
+    color:rgb(255, 208, 0);
+    font-weight: bold;
+}
+div{
+    border: solid 1px rgb(202, 195, 195);
+    width: 510px;
+    box-sizing: border-box;
+}
+.text{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgb(202, 195, 195);
+    
+}
+img{
+    width: 500px;
+    
+}

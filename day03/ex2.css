@@ -1,0 +1,30 @@
+h3{
+    font-weight: bold;
+    border-left: green 6px solid;
+    padding-left: 10px ;
+}
+
+ul{
+    border: solid 2px gray;
+    background-color: rgb(204, 201, 201);
+    padding: 30px 30px 70px ;
+    border-radius: 10px;
+    width: 500px;
+}
+div{
+    padding: 10px ;
+    border: solid gray 2px;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 50px;
+    width: 300px;
+}
+h4{
+    text-align: right;
+}
+hr{
+    border-style: dotted ;
+}
+li{
+    margin: px
+}

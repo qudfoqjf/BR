@@ -1,0 +1,56 @@
+#header{
+    display: flex;
+    background-color: #e8e8e8;
+    z-index: 3;         /* 다른 요소와 겹쳤을때 우선순위 */
+    position: sticky;   /* 해당 요소가 가려질때 위치고정 */
+    top:0px;
+}
+#header ul li{display: inline-block;}
+#popup{
+    background-color: red;
+    width: 200px; height: 200px;
+    position: fixed;    /* 위치 고정 */
+    right:5px; bottom:10px;
+    z-index: 4;         /* 다른 요소와 겹쳤을때 우선순위 */
+}
+/* ============================================================ */
+#full{
+    border: 1px solid aqua;
+    background-color: rgb(0, 183, 255);
+    width: 600px;
+    height: 500px;
+    position: relative;
+    left: 100px; top:100px;
+
+}
+.html{
+    background-color: yellow;
+    border-radius: 10%;
+    width: 100px; height: 90px;
+    text-align: center;
+}
+
+.html1{
+    position: absolute;
+    left: 250px; top:70px; 
+}
+.html2{
+    position: absolute;
+    left: 100px; top: 150px;
+}
+.html3{
+    position: absolute;
+    left: 400px; top: 150px;
+}
+.html4{
+    position: absolute;
+    left: 100px; top: 260px;
+}
+.html5{
+    position: absolute;
+    left: 400px; top: 260px;
+}
+.html6{
+    position: absolute;
+    left: 250px; top: 350px;
+}

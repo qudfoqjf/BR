@@ -1,0 +1,51 @@
+div{
+    border: solid 1px rgb(202, 200, 200);
+    margin: 20px;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+}
+.reg{
+    padding: 20px;
+}
+
+.logo{
+    width: 20px;
+    height: 20px;
+}
+.other{
+    font-weight: bold;
+    color: rgb(10, 82, 141)
+}
+.password{
+    font-size: 13px;
+    color: rgb(0, 86, 156);
+}
+
+.login{
+    color:white;
+    background-color: rgb(68, 163, 226);
+    border-radius: 5px;
+    border-color: rgb(68, 163, 226);
+    width: 260px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.re{
+    color:rgb(0, 162, 255)
+}
+.in{
+    width: 250px;
+    height: 35px;
+    background-color: #fcfcfc;
+    border: #e8e8e8 solid 1px;
+    padding: 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: -5px ;
+}
+.logo1{ 
+    width: 200px;
+    padding: 20px  10px;
+}

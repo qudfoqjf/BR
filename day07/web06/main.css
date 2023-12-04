@@ -1,0 +1,148 @@
+/* *{ 
+    border: 2px solid red;
+} */
+/* ===================================공통================================== */
+*{
+    padding: 0px; margin: 0px; /* 1. 기본 여백 제거 */
+    font-family: 굴림;         /* 2. 폰트 [웹폰트]*/
+    box-sizing: border-box;   /* 3. 안쪽여백,테두리를 포함한 사이즈 */
+    font-size:  12px;          /* 전체적인 폰트 사이즈 */
+}
+a{color: black;text-decoration: none;}  /* 4. a태그의 색상,밑줄 제거 */
+li{list-style-type: none;}  /* 5. 글머리 제거 */
+/* ===================================헤더================================== */
+#topMenu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px; margin-right: 10px;
+}
+#topMenu > li > span{padding: 0px 5px;}
+#mainMenu > ul{
+    display: flex; justify-content: space-between;
+    align-items: center;  
+    width: 1100px;   
+    font-weight: bold; font-size: 18px;
+}
+#searchIcon{width: 20px;}
+#mainMenu > ul li:hover .subMenu{display: block;}
+#mainMenu{
+    display: flex; justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky; top:0px;
+    /* sticky 주의할점
+    1. 상위 요소의 높이 사이즈 안에서 고정
+    2. 위치속성 1개이상 필수: top, right, left, bottom
+    3. 상위 요소가 overflow 속성 금지  
+    */
+    background-color: rgba(255,255,255,0.8);
+}
+.subMenu{
+    position: absolute;
+    top:15px;  left: -20px;
+    padding-top: 25px; width: 80px;
+    display: none;
+    background-color: white;
+}
+
+.subMenu li{text-align: center; margin-bottom: 10px;}
+#mainMenu > ul > li{   
+    position: relative;
+}
+#mainMenu > form{ border-bottom: 1px solid black;}
+#mainMenu > form > input{
+    border: none; padding: 8px; background-color: transparent;}
+*:focus{outline: none;} /* 커서가 있을때 outline제거 */
+/* ===================================본문================================== */
+#mainWrap{width: 1620px; margin: 100px auto;}
+#mainImg{width: 100%;}
+#mainWrap .title{
+    font-size: 18px; font-weight: bold;
+    text-align: center; 
+}
+#mainWrap .coment{
+    text-align: center; color: #858585;
+    margin-top: 20px;
+}
+#mainWrap #items{
+    margin-top:50px;
+    display: flex;
+    flex-wrap: wrap;    /* 자리가 부족하면 자동 줄바꿈 */
+    justify-content: space-between;
+}
+.item{
+    width: 370px;
+    margin-bottom: 100px;
+    /* 한줄에 4개씩 아이템 배치 => 부모사이즈/4 */    
+}
+.item > img{width: 100%;}
+#items{display: flex;}
+.colorReview > .color > span{   /* span은 inline을 사용해야 한다 */
+    width: 10px; height: 10px;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+}
+.colorReview{
+    display: flex; justify-content: space-between;
+    padding: 5px;
+}
+.colorReview > .review{color: #999999;}
+.nameSize{margin: 10px 0px 20px 0px;}
+.nameSize .size{font-size: 11px; color: #999999;}
+.price{position: relative;  margin-bottom: 10px;}
+.price > del {color: #999999;}
+.price .discount{
+    position: absolute;
+    right: 0px; top: 0px;
+    font-size: 15px; font-weight: bold;
+    color: red;
+}
+/* ===================================푸터================================== */
+#footer{    /* 상단 푸터 */
+    background-color: #f7f7f7;
+}
+#footer #inner{
+    width: 1400px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    padding: 50px 0px 70px 0px;
+}
+
+#footer #inner h3{
+    font-size: 16px; font-weight:bold;
+    margin: 10px 0px;
+}
+
+#addr{  /* 하단 푸터 */
+    text-align: center;
+    display: flex;
+    margin: 20px 0 50px 0; color: #999999;
+}
+/* ===================================팝업================================== */
+#popup{
+    position: fixed; 
+    right: 0px; top: 40%;
+}
+#popup > div{
+    width: 40px; height: 40px;
+    border: 1px solid #e8e8e8;
+    background-color: #fafafa;
+    padding: 10px;
+    position: relative;
+}
+#popup > div> img{
+    height: 20px;
+}
+#popup > div > span{
+    position: absolute;
+    top: 0px; right: 40px;
+    font-size: 10px;    color: white;
+    width: 70px; height: 15px;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+#popup > div:hover .popupSub{
+    display: block;
+}

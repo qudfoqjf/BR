@@ -1,0 +1,71 @@
+.in{
+    width: 400px;
+    height: 35px;
+    background-color: #ffffff;
+    border-color: #ffffff00 ;
+    border-bottom: #92929291 solid 1px; 
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: -5px ;
+    color: #e8e8e8;
+    font-weight: bold;
+}
+
+div{
+    border: #e8e8e8 solid 1px;
+    width: 500px;
+    height: 430px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 50px;
+}
+body{
+    padding: 20px;
+    
+}
+.login{
+    color:black;
+    background-color: rgb(255, 251, 0);
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 50px;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 20px 0px 0px;
+}
+.qr{
+    color:black;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 50px;
+    box-sizing: border-box; 
+}
+.state{
+    text-align: left;
+    margin: 10px 0px;
+}
+h1{
+    text-align: center;
+}
+.act{
+    text-align: right;
+    font-size: 12px;
+    margin: 20px 0px;
+    word-spacing: 5px;
+}
+
+span{
+    color: #e8e8e8;
+}
+.ect{
+    text-align: center;
+    font-size: 11px;
+    word-spacing: 5px;
+}
+.info{
+    font-weight: bold;
+}
