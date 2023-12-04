@@ -59,7 +59,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
             font-weight: 500;
             margin: 10px 0px;}
 
-    #eventInfo{height: 880px;
+    #eventInfo{/* height: 880px; */
         padding-top: 150px;}
     #eventInfo > div{width: 1140px; margin: 0 auto;}
     #eventInfo span{font-size: 24px; color: #8C6239; font-weight: 300;}
@@ -78,7 +78,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     .bannerDate a{color: #999999;}
 
     #banner{border-bottom: 1px solid #f7f0e4; padding: 20px 15px 25px 15px;}
-    #eventBanner{display: flex; flex-wrap: wrap}
+    #eventBanner{display: flex; flex-wrap: wrap;} 
 
     #eventPage{width: 1140px; margin: 0 auto; padding: 50px 0px 50px 0px;}
     #eventPage1{display: flex; justify-content: center;}
@@ -88,7 +88,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     .mainPage{color: #de1d24;}
 
     .hoverTest:hover{color: #ffc107;}
-    /* ==============================================푸터========================================= */
+
+    /* ==============================================푸터============================================== */
 #footer{
     background-color: #212529;
     padding: 24px;
@@ -97,6 +98,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     flex-direction: column;
     justify-content: center;
     font-weight: 400;
+    width: 100%;
 }
 #ftText1{display: flex;justify-content: center;}
 #ftText1 > li {padding: 0 15px;color: #666; font-weight: 400;}

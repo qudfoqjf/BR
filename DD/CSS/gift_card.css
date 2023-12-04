@@ -1,36 +1,25 @@
-/* reset */
-*{
-  padding: 0;
-  margin: 0;
-  /* border: 1px solid orange; */
-}
-a{
-  text-decoration: none;
-  color: black;
-}
-input{
-  border: none;
-}
-select{
-  border: none;
-}
-li{
-list-style-type: none;
-}
-/* ==================================헤더======================================= */
-#hdWrap{position: fixed; top: 0px;
+/* *{border: 2px solid red; padding: 10px;} */
+a{color: black; text-decoration: none;}
+
+/* ================== 폰트 적용 ================== */
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+/* ======================= header ========================== */
+#hdWrap{position: sticky; top: 0px;
   background-color: white; width: 100%;
-border-bottom: 1px solid rgba(33, 37, 41, 0.1);}
-#header{
+border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+z-index: 500;}
+
+#hdWrap #header{
 width: 1140px;
 margin: 0 auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
-#hdLogo img{width: 145px;}
+#hdWrap #hdLogo img{width: 145px;}
 
-#hdMenu{display: flex;}
+#hdWrap #hdMenu{display: flex;}
 
   #bgSubmenu{background-color: rgba(0, 0, 0, 0.9);
   width: 100%; height: 180px; position: fixed; top: 110px; left: 0px;
@@ -43,30 +32,31 @@ align-items: center;
   #bgSubmenu ul > li > a{color: white;}
   #bgSubmenu ul > li > a > span{padding-top: 15px; color: #FA8072; font-size: 13px;}
 
-#hdMenu li{
+  #hdWrap #hdMenu li{
   font-size: 19px;
   margin: 0px 35px;
   padding: 30px 0px 20px 0px;
 }
 
-  .gift{
+#hdWrap .gift{
       color: #B22222; font-size: 21px; font-weight: bold;
       background-color: #faebd7;
       padding: 3px 5px 3px 5px;
       border-radius: 10px;
 }
-.menuLogo{height: 23px; margin-right: 5px;}
+#hdWrap .menuLogo{height: 23px; margin-right: 5px;}
 
-#topLink{display: flex; justify-content: end; padding: 10px 40px 0px 0px;}
-#topLink ul{display: flex; margin-right: 15px;}
-#topLink img{height: 24px;}
-#topLink li > a{margin-right: 8px;}
-#topLink > span{margin-left: 10px; color: #8C6239;}
-.login a, .join a{color: #8C6239; margin-right: 10px; font-weight: 300;}
+#hdWrap #topLink{display: flex; justify-content: end; padding: 10px 40px 0px 0px;}
+#hdWrap #topLink ul{display: flex; margin-right: 15px;}
+#hdWrap #topLink img{height: 24px;}
+#hdWrap #topLink li > a{margin-right: 8px;}
+#hdWrap #topLink > span{margin-left: 10px; color: #8C6239;}
+#hdWrap .login a, .join a{color: #8C6239; margin-right: 10px; font-weight: 300;}
   /* =============== 호버 =============== */
-  #nav:hover #bgSubmenu{display: block;}
+  #hdWrap #nav:hover #bgSubmenu{display: block;}
+/* ======================= header end ========================== */
 
-
+/* ============================= gift card ============================== */
 /* ==== main_top ==== */
 #mainTop{
   width: 1110px;
@@ -132,6 +122,7 @@ align-items: center;
   margin: 0 auto;
   text-align: center;
   padding: 16px 0;
+  margin-bottom: 80px;
 }
 #main>h2{ 
   color: #8C6239;
@@ -164,7 +155,28 @@ align-items: center;
   font-size: 24px;
 }
 
+.gftBuyBox>p{
+  line-height: 25px;
+}
+
+.gftBuyBox>div{
+  justify-content: center;
+  color: white;
+  display: block;
+  width: 250px;
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.gftBuyBox>div>a{
+  display: inline-block;
+}
+
 /* gft_boxA */
+
 .gftBuyBoxA>p>span{
   color: black;
   font-size: 19px;
@@ -173,17 +185,8 @@ align-items: center;
 .gftBuyBoxA>span{
   display: block;
 }
-.gftBuyBoxA>a{
-  color: white;
-  display: block;
-  width: 250px;
-  height: 50px;
-  background-color: #808080;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  box-sizing: border-box;
-  padding: 12px;
+.gftBuyBoxA>div{  
+  background-color: #808080;  
 }
 /* gft_boxA end */
 
@@ -194,22 +197,19 @@ align-items: center;
  font-weight: bold;
 }
 
-.gftBuyBoxB>a{
-  color: white;
-  display: block;
-  width: 250px;
-  height: 50px;
+.gftBuyBoxB>div{
   background-color: black;
-  margin: 0 auto;
-  margin-top: 20px;
-  box-sizing: border-box;
-  padding: 12px;
-
+}
+.gftBuyBoxB>div>a{
+  color: white ;
 }
 /* gft_boxB end */
 
 /* ==== main end ==== */
-/* ==============================================푸터========================================= */
+
+/* ============================= gift card end ============================== */
+
+/* =========================== footer ============================== */
 #footer{
   background-color: #212529;
   padding: 24px;
@@ -237,7 +237,10 @@ align-items: center;
 }
 .ftTt1{margin: 16px 0 0;}
 #ftText3{text-align: center;margin: 32px 0 0 0;}
-/* ==============================================사이드========================================= */
+/* =========================== footer end ============================== */
+
+
+/* ================================= side bar ============================== */
 #popup{
   position: fixed; 
   right: 1%; top: 30%;
@@ -257,3 +260,4 @@ align-items: center;
   color : white; font-weight: bold;
   text-decoration: none;
 }
+/* ================================= side bar end ============================== */
