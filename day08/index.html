@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans
@@ -69,27 +69,27 @@
       <div class="innerWrap">
         <h2>RSVP</h2>
         <form action="" method="">
-          <p>
+          <p class="attendRadio">
             <label><input type="radio" name="attend" value="참석" checked>참석</label>
             <label><input type="radio" name="attend" value="불참">불참</label>
           </p>
           <p>성함 <input type="text" name="user_name"></p>
           <p>메일 주소<input type="email" name="user_mail"> </p>
           <p>자신의 유형<select name="user_type">
-              <option value="초식 동물"> 초식 동물 </option>
-              <option value="육식 동물"> 육식 동물 </option>
-              <option value="인간"> 인간 </option>
+            <label><option value="초식 동물"> 초식 동물 </option></label>
+              <label><option value="육식 동물"> 육식 동물 </option></label>
+                <label><option value="인간"> 인간 </option></label>
             </select>
           </p>
-          <p>
+          <p class="allergyCheck">
             알레르기가 있는 음식
-            <input type="checkbox" name="allergy" value="달걀">달걀
-            <input type="checkbox" name="allergy" value="우유">우유
-            <input type="checkbox" name="allergy" value="밀">밀
-            <input type="checkbox" name="allergy" value="대두">대두
+            <label><input type="checkbox" name="allergy" value="달걀">달걀</label>
+            <label><input type="checkbox" name="allergy" value="우유">우유</label>
+            <label><input type="checkbox" name="allergy" value="밀">밀</label>
+            <label><input type="checkbox" name="allergy" value="대두">대두</label>
           </p>
           <p>메시지<textarea name="message"></textarea></p> <!-- p.130 -->
-          <p><input type="submit" value="Send"></p>
+          <p class="submitBtn"><input type="submit" value="Send"></p>
         </form>
       </div>
     </section>

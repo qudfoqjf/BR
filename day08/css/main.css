@@ -4,11 +4,10 @@
     font-size: 18px;
     color: #121212;
 }
-a{text-decoration: none;}
 .ffJosefin{
     font-family: 'Josefin Sans ', sans-serif;
 }
-.innerWrap{/* p.139 */
+.innerWrap{/* p.138 */
     width: 1240px; margin: 0 auto;
     padding: 80px 20px 0;
 }
@@ -16,6 +15,7 @@ main h2{
     text-align: center;
     font-size: 60px;
     letter-spacing: 0.05em; /* 글자간격 */
+    margin-bottom: 80px;
 }
 header{
     background: url(../images/background.jpg);
@@ -29,7 +29,7 @@ header h1{
     padding-top: 120px;
 }
 header .scroll{
-    position: absolute; left:0; bottom: 0;
+    /* position: absolute; */ left:0; bottom: 0;
     width: 100%; text-align: center; font-size: 16px;
     /* header .innerWrap */
 }
@@ -129,7 +129,82 @@ input[type="check"]{
     vertical-align: baseline;  
     margin-right: 4px   
 }
-
+.attendRadio{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.attendRadio label{
+    margin: 0 20px;
+    font-size: 24px
+}
+.allergyCheck label{
+    margin-right: 24px;
+}
+select{
+    background: url(../images/arrow.png) no-repeat 98% 50%/17px 10px; 
+}
+/* p.161 */
+textarea{
+    height: 148px;
+    margin-bottom: 30px;
+}
+form > p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.submitBtn{
+    text-align: center;
+}
+input[type="submit"]{
+    background-color: #121212;
+    color: #ffffff;
+    padding: 18px 80px;
+}
+/* p.162  패럴랙스 효과*/
+footer{
+    background-color: #c7887f;
+    color: #f3e9e5;
+    padding: 14px 10px 20px;
+    text-align: center;
+}
+/* p.163 */
+.dateSec {
+    margin-bottom: 480px;
+}
+.dateSec ::after{
+    content: "";
+    position: fixed;    /* 스크롤이 움직여도 고정 */
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg.jpg) no-repeat center/cover;
+    z-index: -1; /* 기본 요소들보다 아래에 배치 */
+}
+/* p.164 애니메이션 */
+input[type="submit"]:hover{
+    background-color: #c7887f;
+    margin-left: 20px;
+    transition-property: background-color,margin-left;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;    /* 시작 천천히 끝은 빨리 */
+    transition-delay: 0ms;  /* 지연시간 없음 */   
+    transition: all 300ms ease-in 100ms; /* 한줄로 표현 */
+}
+/* p.167 키프레임 애니메이션*/
+@keyframes scrollAnimation{
+    0% {transform: scaleY(0); transform-origin: top;/* 스크롤의위치가 0일때 */}
+    50% {transform: scaleY(1); transform-origin: top;/* 스크롤의위치가 50일때 */}
+    50.1% {transform: scaleY(1); transform-origin: bottom;/* 스크롤의위치가 50.1일때 */}
+    100% {transform: scaleY(0); transform-origin: bottom;/* 스크롤의위치가 100일때 */}
+}
+/* p.169 */
+header .scroll img{
+    animation-name: scrollAnimation;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
 /* 
     p.150
     !important > style 속성 > id > class > 타입 > *
