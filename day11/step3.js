@@ -101,8 +101,8 @@ function 문제7오름차순(){
     //처리
     let temp = 0;
     if(value1>value2){let temp=value2; value2= value1;   value1=temp;}
-    if(value1>value3){let temp=value1; value3= value1;   value1=temp;}
-    if(value2>value3){let temp=value2; value3= value2;   value2=temp;}
+    if(value1>value3){let temp=value3; value3= value1;   value1=temp;}
+    if(value2>value3){let temp=value3; value3= value2;   value2=temp;}
     result=`${value1} ${value2} ${value3}`
     //[출력]
     document.querySelector('#result').innerHTML=`${result}`
@@ -113,6 +113,13 @@ function 문제7내림차순(){
     let value2 = Number(document.querySelector('#input2').value);
     let value3 = Number(document.querySelector('#input3').value);
     //처리
+    let temp = 0;
+    if(value1<value2){let temp=value2; value2= value1;   value1=temp;}
+    if(value1<value3){let temp=value3; value3= value1;   value1=temp;}
+    if(value2<value3){let temp=value3; value3= value2;   value2=temp;}
+    result=`${value1} ${value2} ${value3}`
+    //[출력]
+    document.querySelector('#result').innerHTML=`${result}`
 
 }
 
