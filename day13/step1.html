@@ -5,10 +5,24 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='step1.js'></script>
 </head>
 <body>
+
+    <div style="display:  flex;">
+        <div style="width: 50%; border: 1px solid black;">
+            <h3> 회원 가입 : 배열내 값 저장</h3>
+            ID: <input id="signId" type="text"/>        <br/>
+            PW: <input id="signPw" type="text"/>        <br/>
+            <input onclick="signUp()" type="button" value="가입"/>
+        </div>
+        <div style="width: 50%; border: 1px solid black;">
+            <h3> 회원 로그인 : 배열내 값 확인</h3>
+            login ID:<input id="logId" type="text"/>       <br/>
+            login PW:<input id="logPw" type="text"/>       <br/>
+            <input onclick="logIn()" type="button" value="로그인">
+        </div >
+    </div>
     
 </body>
 </html>
