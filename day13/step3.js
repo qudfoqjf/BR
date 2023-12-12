@@ -94,7 +94,7 @@ for(let i= 1; i<=10; i++){ //for start
     for 시작
         i           조건[i<=10]         실행문[sum += i]        sum누계     증감식[i++]
         i = 1       true                0+1 => 1                sum = 1      i=2
-        i = 2       true                1+2 => 3                sum = 3      i=3
+        i = 2       true                1+2 => 3                sum = 3      i=3 
         i = 3       true                3+3 => 6                sum = 6      i=4
         i = 4       true                6+4 => 10               sum = 10     i=5
         i = 5       true                10+5 => 15              sum = 15     i=6
@@ -105,3 +105,43 @@ for(let i= 1; i<=10; i++){ //for start
         i = 10      true                45+10 => 55             sum = 55     i=11
         i = 11      false 반복문 종료.
 */
+
+//예5) 1부터 100까지 7배수의 누적합계
+    //1. i는 0부터 100까지 7씩 증가
+sum =0;
+for(let i= 0;i<=100;i+=7){
+    sum+= i;
+}//for end
+console.log(`1~100까지 7배수 합:${sum}`);
+    //2. i는 1부터 100까지 7배수 i%7 ==0
+sum=0;
+for(let i=1; i<= 100; i++){
+    if(i%7==0)  {sum+=i;}// 만약에 i가 나누기 7을 했을때 나머지가 0이면 i는 7의배수.
+}//for end
+
+//for 중첩 
+for(let 부모 = 1; 부모<=5; 부모++){
+    // -부모는 1부터 5이하까지 1씩증가 반복
+    console.log(`======${부모}======`)
+    for(let 자식 =1; 자식<=3; 자식++){
+        //- 자식은 1부터 3이하까지 1씩 증가 반복
+    console.log(`${부모}의 자식:${자식}`)
+    }   //for2 증가
+} //for1 end
+
+// 예6) 구구단.
+//1. 2단
+
+const 단 = 2;
+for(let 곱 =1; 곱 <=9 ; 곱++){
+    console.log(`${단}X${곱}= ${단*곱}`)
+}
+//2. 9단
+for(let dan =2; dan <= 9; dan++){console.log(`단:${dan}`)}
+for(let gob =1; gob <= 9; gob++){console.log(`곱:${gob}`)}
+
+for(let dan = 2; dan <=9 ; dan++){
+    for(let gob=1; gob <=9 ; gob++){
+        console.log(`${dan}X${gob}= ${dan*gob}\n`)
+    }   // for2 end
+}   // for1 end
