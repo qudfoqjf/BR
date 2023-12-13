@@ -52,9 +52,9 @@ for(let i=1;i<=line6;i++){
     for(let s =1; s<=line6-i+1;s++){output+='*';}
     //[줄바꿈]
     output+='\n';
-}  */
-console.log(output)
-//문제7
+}  
+console.log(output) */
+/* //문제7
 output = '';
 const line7=Number(prompt('문제7 줄수:'));
 for(let i=1;i<=line7;i++){
@@ -74,4 +74,67 @@ for(let i=1;i<=line8;i++){
     //[줄바꿈]
     output+='\n';
 }
-console.log(output)
+console.log(output) */
+
+//문제10
+/* output='';
+const line10=Number(prompt('문제10 줄수:'));
+
+for(let r =1; r<= line10; r++){
+
+        for(let c=1; c<=line10;c++){
+            if(r==c){output+=`*`}
+            else if(r+c==line10+1){output+=`*`}
+            else{output+=' '}
+        }      
+}   output+='\n';
+console.log(output); */
+
+// 문제 10-2
+function 문제10() {
+    const line = Number(document.querySelector('#line10').value);
+    let html = '';
+    //[행]
+    for (let r = 1; r <= line; r++) {
+        html += `<tr>`; // 행 시작
+        //[열]
+        for (let c = 1; c <= line; c++) {
+            if (c == r) { html += `<td>★</td>` }
+            else if (c+r == line + 1) { html += `<td>★</td>` }
+            else{ html += `<td> </td>`; }
+        }
+        // 줄 끝
+        html += `</tr>`;
+    }
+    const tableObj = document.querySelector('#table10');
+    tableObj.innerHTML = html;
+} //f end
+
+function 문제9(){ //f start
+    const line = Number(document.querySelector('#line9').value);
+    let half = parseInt((line/2))+1;
+    let html = '';
+        // [행]
+            for(let r= 1; r<=line; r++){
+                html+=`<tr>`; // 행 시작
+
+                //[열]
+                if(r<=half){
+                    for(let c =1; c<=half-r+1; c++){ html +=`<td> </td>`}
+                    for(let c =1; c<=r*2-1; c++){ html +=`<td>★</td>`}         
+                }
+                else if(r>half){
+                    for(let c=1; c<=(r-half)+1;c++){ html +=`<td> </td>`}
+                    for(let c=1; c<=2*(line-r)+1;c++){html +=`<td>★</td>`}
+                }
+            }
+            const tableObj = document.querySelector('#table9');
+            tableObj.innerHTML = html;
+
+
+
+
+
+
+
+} // f end
