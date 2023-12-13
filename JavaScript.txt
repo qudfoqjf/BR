@@ -195,7 +195,7 @@ consol("안녕)---------------명령어------------> [번역]01011011101011111
         - var 또는 let: 변수 선언하는 의미 담고 있는 키워드
 
     -변수/상수 만들기
-        1. 키워듸 const, let
+        1. 키워드 const, let
         2. 식별이름 : 변수/상수명 정하기[중복없이]
         3. =: 대입
         4. 초기값
@@ -245,6 +245,19 @@ consol("안녕)---------------명령어------------> [번역]01011011101011111
             if(조건4){}
     2. switch
         -default, break
+
+-제어문(반복문)
+    1. for문(초기값; 조건문; 증감식){
+            실행코드
+    }
+
+    2. 실행순서
+        1. 초기값
+        2. 조건문
+        [참이면] 3. 실행코드 4. 증감식 2. 조건문
+        [거짓이면] 종료             [참이면] 3. 실행코드 4. 증감식 2. 조건문
+                                   [거짓이면] 종료
+                                   
 
 -키워드
     break : switch, 반복문(for, while) {} 탈출
@@ -303,3 +316,19 @@ consol("안녕)---------------명령어------------> [번역]01011011101011111
     -선언된 위치{} 에 따라 변수 사용 여부 판단.
         -1. {} 안에서 선언된 변수/상수는 해당{} 밖에서 사용이 불가능하다.
         -2. {} 안에서 선언된 변수/상수는 해당{} 안에 하위{}안에는 들어갈 수 있다.
+
+-DOM(문서Document 객체Object 모델 model) 객체
+    1. document.querySeletor('선택자')
+        -선택자
+        1.'#id명','.class명','마크업'등
+
+        -속성
+            .value;                  input, select, textarea 등
+            .innerHTML;              입력태그 외 :div, table, ul, h, span 등
+
+    -a. HTML 전체를 호출한다.
+        const htmlObj - document.querySeletor('input');
+    -b. HTML 중에서 input 1개 호출
+        const inputObj = document.querySeletor('input');
+    -c. HTML 중에서 input의 입력된 value 호출
+        const inputValue = document.querySeletor('input').value;
