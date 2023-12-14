@@ -15,6 +15,7 @@ function Register(){
     //[3.출력]
     output();
     Sum();
+    rest();
 }
 
 //2. 출력함수
@@ -47,4 +48,11 @@ function Sum(){
     let total = 0;   
     for(i=0;i<costList.length;i++){total+=Number(costList[i])}   
     sum.innerHTML =Number(total);
+}
+
+//5. 쉼표함수
+function rest(){
+    let leng= ('cost').length; console.log(leng);
+    let slice = 'cost'.split ; console.log(slice)
+    if(leng>3){}
 }
