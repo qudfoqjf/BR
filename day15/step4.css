@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;  
+}
+#list{
+    display: flex; flex-direction: column;
+}
+#regi{
+    display: flex;
+}

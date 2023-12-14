@@ -1,0 +1,35 @@
+/* 공통 CSS */
+*{
+    box-sizing: border-box; font-size: 16px;
+    font-family: sans-serif
+}
+/* 전체 구역 */
+#wrap{ width: 300px; margin: 0 auto;}
+/* 쓰기 구역 */
+#todoTop{display: flex; height: 40px;}
+#content{
+    width: 250px; padding: 10px;
+    border: none; box-shadow: 0px 0px 5px #d68585 ;
+}
+#todoTop > input[type="button"]{
+    width: 50px; padding: 10px;
+    border: none; box-shadow: 0px 0px 5px #d68585;
+    cursor: pointer;
+}
+
+/* 출력 구역 */
+.todo{
+    display: flex;
+    justify-content: space-between; /* 가로정렬 */
+    align-items: center; /* 세로정렬 */
+    font-size: 20px; font-weight: bold;
+    margin: 20px 1px;   padding: 5px 10px;
+    background-color: #d68585; border-radius: 10px;
+} 
+.todo > .btnBox >input{
+    font-size: 12; cursor: pointer;
+    border: none; box-shadow: 0px 0px 3px #d68585;
+    
+}
+.success{background-color: #6c6c6c;}
+.success > .content{text-decoration: line-through ;color:white;}
