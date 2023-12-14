@@ -11,28 +11,30 @@
 </head>
 
 <body>
-    <h1>가계부</h1>
-    <div id="regi">
-        <div id="list">
-            <p>날짜: <input id="date" type="date" /></p>
-            <p>항목: <input id="content" type="text" /></p>
-            <p>금액: <input id="cost" type="text" /></p>
+    <div id="wrap">
+        <h1>가계부</h1>
+        <div id="regi">
+            <div id="list">
+                <p>날짜: <input id="date" type="date" /></p>
+                <p>항목: <input id="content" placeholder ="항목" type="text" /></p>
+                <p>금액: <input id="cost" placeholder="금액" type="text" /></p>
+            </div>
+            <input id="Bt" onclick="Register()" type="button" value="등록">
         </div>
-        <input onclick="Register()" type="button" value="등록">
-    </div>
-    <div>
-        <table>
-            <thead>
-                <tr>날짜</tr>
-                <tr>항목</tr>
-                <tr>금액</tr>
-                <tr>비고</tr>
-            </thead>
-            <tbody id="write">
+        <div id="bottom">
+            <table id="tb">
+                <thead id="head">
+                    <th>날짜</th>
+                    <th>항목</th>
+                    <th>금액</th>
+                    <th>비고</th>
+                </thead>
+                <tbody id="write">
 
-            </tbody>
-        </table>
-        총합계:<h id="sum"></h> 원
+                </tbody>
+            </table>
+            <div id="sumbox">총합계:<h id="sum"></h> 원</div>
+        </div>
     </div>
 </body>
 
