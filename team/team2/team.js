@@ -66,19 +66,27 @@ function 등록1(){   //등록1 f start
 
 function 삭제1(삭제1매개변수){    //삭제1 함수 start
     console.log('삭제1 함수 실행');
+    //231215_19:09 수정
+        let search=0;
+        let 부품2count=부품2.length;
+        console.log(`부품2=${부품2.length}`);
+        
+        for(let i=1; i<=부품2count; i++){
+            search=부품2.indexOf(부품1[삭제1매개변수]);
+            console.log(`search=${search}`);
 
-    let search=부품2.indexOf(부품1[삭제1매개변수]);
-
+                if(search!=-1){
+                    부품2.splice(search,1);
+                    업체2.splice(search,1);
+                    개수2.splice(search,1);
+                    총가격2.splice(search,1);
+                }
+        }
+    //--------------
+ 
     부품1.splice(삭제1매개변수,1);
     업체1.splice(삭제1매개변수,1);
-    가격1.splice(삭제1매개변수,1);
-
-    if(search!=-1){
-        부품2.splice(search,1);
-        업체2.splice(search,1);
-        개수2.splice(search,1);
-        총가격2.splice(search,1);
-    }
+    가격1.splice(삭제1매개변수,1);   
 
     출력1();
     출력2();
