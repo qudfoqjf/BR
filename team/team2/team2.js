@@ -4,15 +4,8 @@ const 업체등록=[];
 const 업체등록2=[];
 // [객체]=====
 
-/* const 부품1=[]; // 배터리, 컴퓨터, 모니터, 핸드폰
-const 업체1=[]; // 삼성, LG, 카카오, 인텔
-const 가격1=[]; */
-// 삼성 : 업체명 : 삼성, 부품명 : 배터리, 가격 : 1000
-// 삼성 : 업체명 : 삼성, 부품명 : 모니터, 가격 : 2000
-
 const 개수2=[];
 const 총가격2=[];
-
 
 //========================================form1===============================================
 function 등록1(){   //등록1 f start
@@ -25,19 +18,15 @@ const 업체=document.querySelector("#업체").value;
 const 가격=document.querySelector("#가격").value;
 
     //유효성 검사---------------------------------------------
-    
     for(let i=0; i<업체등록.length; i++){
         if(업체등록[i].부품1==부품){//동일부품 존재 시
             console.log(업체등록.부품1==부품);
             alert('동일한 부품이 존재합니다.');
             console.log('부품 중복');
-        
             value초기화();
-
             return;
         }
     }
-
     //빈칸검사
     if(부품==""){ alert('부품명을 입력해 주십시오.'); return; }
     if(업체==""){ alert('업체명을 입력해 주십시오.'); return; }
@@ -83,7 +72,6 @@ console.log('삭제1 함수 실행');
             업체등록2.splice(i,1);
         }
     }                
-    
 //--------------
 
 업체등록.splice(삭제1매개변수,1);
@@ -97,7 +85,7 @@ for(let i=0 ;i<업체등록.length;i++){
 }
 option.innerHTML = html;
 //=======================================================       
-
+삭제함수()
 출력1();
 출력2();
 }   //f end
@@ -120,9 +108,7 @@ for(let i=0; i<업체등록.length; i++){
                 </div>
              </div>`
     } 
-
 output1.innerHTML=html;
-
 }   //f end
 
 function value초기화(){ //vlaue값 초기화 f start
@@ -130,7 +116,6 @@ document.querySelector("#부품").value=``;
 document.querySelector("#업체").value=``;
 document.querySelector("#가격").value=``;
 }// f end
-
 //========================================form1 end===============================================
 
 // 등록2 함수
@@ -138,28 +123,19 @@ function 등록2(){console.log('등록2함수실행')
 const 개수=document.querySelector('#개수').value;
 const 부품s=document.querySelector('#부품s').value;
     console.log( 부품s );
-        
-
+    
 let 업체인덱스 = -1;
 for( let i = 0 ; i<업체등록.length ; i++ ){
     if( 업체등록[i].부품1 == 부품s ){
-        업체인덱스 = i ;
+        업체인덱스 = i;
         break;
     }
 }
-
 let 물품당합계=업체등록[업체인덱스].가격1*개수;
-
 const 등록2={부품2:부품s, 업체2:업체등록[업체인덱스].업체1, 개수2:개수, 총가격2:물품당합계}
-
 업체등록2.push(등록2);
-
 출력2();
-
-
 }
-
-
 function 출력2(){console.log('출력2함수실행')
 const output2=document.querySelector('#출력2')
 let html='';
@@ -187,17 +163,14 @@ for(let i=0; i<업체등록2.length; i++){
 // 총합계
 output2.innerHTML=html;
 }
-
 function total(){
 const output3=document.querySelector("#총합계")
 let total=0;
 for(let i=0; i<업체등록2.length; i++){
     total += Number(업체등록2[i].총가격2);
 }
-
 output3.innerHTML=`<div> 총 합계 : <span>${ (total*1).toLocaleString() } 원 </span>  </div>`;
 }
-
 //발주 삭제 함수입니다
 function 삭제함수(삭제할인덱스){
 console.log('삭제함수()실행' + 삭제할인덱스);
