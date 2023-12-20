@@ -1,0 +1,101 @@
+*{
+    margin: 0px; padding: 0px;
+}
+li{
+    list-style:none; /* 글머리제거 */
+}
+/* 전체구역 */
+
+#wrap{width: 700px; margin: 10px auto;}
+
+/* 헤더 이미지 */
+#header > img{width: 100%;}
+/* 헤더 카테고리 */
+#header >ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+/* 선택된 카테고리 */
+.select{
+    color: red; font-weight: bold;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+
+/* 제품 목록 구역*/
+#productBox{
+    display: flex; flex-wrap: wrap;
+    margin: 20px 0px;
+    height: 450px;  /* 부모요소 고정 */
+    /* 자식요소가 고정 사이즈의 부모요소보다 커졌을때 */
+    overflow-y: scroll; /* 세로 스크롤 생성 */
+}
+#productBox> .product{
+    width: 32%;
+}
+/* 제품이미지 */
+#productBox>.product>img{width: 100%;}
+
+/* 제품 이름 가격 */
+#productBox>.product > .pinfo{text-align: center;}
+#productBox>.product .pname{font-weight: bold;}
+#productBox>.product .pprice{color:red;}
+
+/* 카트버튼 */
+#cartBtns{display: flex;}
+#cartBtns>input{
+    width: 100%; height: 50px;
+    font-size: 20px; border: none;
+    color:white;
+}
+/* 자식요소 여러개일때 [형제가 여러개일때] 자식의 순번으로 */
+/* 자식요소선택자:nth-child(인덱스) */
+#cartBtns>input:nth-child(1){background-color: black;}
+#cartBtns>input:nth-child(2){background-color: red;}
+/* 카트 상단 */
+#cartTop{
+    display: flex; justify-content: space-between;
+    padding:10px 50px;
+}
+#cartContent{background-color: #e8e8e8;}
+#cartBottom{
+    display: flex; overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+#cartBottom>.cartItem{
+    min-width: 150px;
+    background-color: white;
+    margin: 10px; padding: 10px;
+    position: relative;
+}
+#cartBottom>.cartItem>span{
+    position: absolute;
+    top: 10px; right: 10px;
+}
+#cartBottom>.cartItem >div:nth-child(1){width: 130px;height: 60px;}
+#cartBottom>.cartItem >div:nth-child(2){color:red}
+#cartTop>div:nth-child(1)>span{
+    background-color: red;
+    border-radius: 30px;
+    display: inline-block;
+    padding:3px; width: 30px;  
+    text-align: center;color:white;
+}
+/* 총주문금액 */
+#cartTop>div:nth-child(2)>span{color: red;}
+/*관리자 메뉴 */
+#admin{
+    display: flex;
+    justify-content: space-around;
+}
+#manager{
+    text-align: center;
+}
+#manager input{
+    border: none;background-color: #e8e8e8;
+    width: 300px; height: 50px;
+    font-size: 20px; font-weight: bold;
+}
+#regProduct{margin: 20px;}
+#regProduct>div{padding: 10px;}

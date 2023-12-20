@@ -125,3 +125,6 @@ CSS : 캐스팅 스타일 시트 (Cascading Style Sheets)
     A. 색상이름: red
     B. 헥사코드: b6a54c
     C. RGB색상: rgb(0~255, 0~255, 0~255)
+    
+    
+자식요소선택자:nth-child()
