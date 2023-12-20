@@ -105,17 +105,15 @@ function regCategory(select){
 //함수8. 제품등록
 
 function regProduct(){
-    const productpush =[]
-    productpush.push(pname.value,pprice.value,pimg.value,cno.value)
-    console.log(productpush)
-    let name=productpush[0];console.log(name);
-    let price=productpush[1]*1;console.log(price);
-    let img=productpush[2];console.log(img);
-    let canum=productpush[3]*1;console.log(canum);
+    let name=pname.value;console.log(name);
+    let price=pprice.value*1;console.log(price);
+    let img=pimg.value;console.log(img);
+    let canum=cno.value*1;console.log(canum);
     product.push({cno:canum,pno:product.length+1,pname:name,pprice:price,pimg:img})
     console.log(product)
-    selCategory(1)
+    selCategory(canum)
 }
+//함수9. 
 
 
 
