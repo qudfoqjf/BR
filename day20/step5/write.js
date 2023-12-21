@@ -5,9 +5,10 @@ function 글쓰기() {
     const password = document.querySelector('#password').value; 
     const title = document.querySelector('#title').value; 
     const content = document.querySelector('#content').value; 
+    let  views = 0
     
     //2. 배열에 저장하기        객체로 변경
-    let board = {작성자: writer, 비밀번호: password, 제목: title, 내용: content}; //위에서가져온 4개의 값을 객체로 저장   
+    let board = {작성자: writer, 비밀번호: password, 제목: title, 내용: content, 조회수:views}; //위에서가져온 4개의 값을 객체로 저장   
     boardArray=JSON.parse(localStorage.getItem('boardArray'));
     
     if(boardArray==null){boardArray=[]}

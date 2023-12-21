@@ -4,10 +4,11 @@ function 글출력() {
     let html='';              
     for (let i = 0; i < boardArray.length; i++) {  
         console.log(boardArray);
-            html += `<tr> 
+            html += `<tr onclick="개별글출력(${i})"> 
                         <th>${i}</th>
                         <th>${boardArray[i].제목}</th> 
                         <th>${boardArray[i].작성자}</th>
+                        <th>${boardArray[i].조회수}</th>
                     </tr>` 
     };
     console.log(html);
@@ -15,4 +16,12 @@ function 글출력() {
     return;
 }
 글출력()
+
+function 개별글출력(index){
+
+const boardArray = JSON.parse(localStorage.getItem('boardArray'));
+boardArray[index].조회수+=1;
+localStorage.setItem('boardArray',JSON.stringify(boardArray));  
 location.href="view.html"
+localStorage.setItem('selectNum',JSON.stringify(index));
+}
