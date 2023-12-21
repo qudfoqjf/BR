@@ -11,8 +11,10 @@ function 등록(){
         mid:mid,
         mpw:mpw
     }
-    const memberArray=JSON.parse(localStorage.getItem('memberArray')) ;//기존 배열호출
-    memberArray.push(member);   //
+    let memberArray=JSON.parse(localStorage.getItem('memberArray')) ;//기존 배열호출
+    
+    if(memberArray==null){memberArray=[]}
+    memberArray.push(member);   
 
     localStorage.setItem('memberArray',JSON.stringify(memberArray));
     //3. 출력[X]
