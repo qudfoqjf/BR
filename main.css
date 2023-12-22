@@ -1,0 +1,10 @@
+/* *{box-sizing: border-box; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;background-color:rgb(238, 199, 149);
+}
+
+a{text-decoration: none; color: #c74626;;font-size: 20px;}
+h3{font-size: 25px; color:rgb(163, 87, 51)}
+h1{color:rgb(163, 87, 51)}
+#point{display: flex;justify-content: space-around;}
+#htmlcss>div{border: #c74626 3px solid; border-radius: 20px;padding: 10px; width: 300px;}
+#htmlcss{display: inline-block;} */
