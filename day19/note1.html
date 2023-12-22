@@ -41,7 +41,7 @@
                 </div>
                 <div id="cartBtns">
                     <input onclick="allRemove()" type="button" value="취소하기" />
-                    <input type="button" value="주문하기" />
+                    <input type="button" onclick="order()" value="주문하기" />
                 </div>
             </div>
 
@@ -64,6 +64,19 @@
         </div>
     </div>
     <div>주문내역</div>
+    <table>
+        <thead>
+            <th>날짜</th>
+            <th>메뉴</th>
+            <th>총금액</th>
+            <th>비고</th>
+        </thead>
+        <tbody id="print">
+
+
+        </tbody>
+
+    </table>
     <script src='note1.js'></script>
 </body>
 

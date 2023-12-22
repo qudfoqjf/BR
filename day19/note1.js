@@ -114,6 +114,10 @@ function regProduct(){
     selCategory(canum)
 }
 //함수9. 
-
+function order(){
+    confirm('주문하시겠습니까?')
+    let time=new Date();
+    console.log(time);
+}
 
 
