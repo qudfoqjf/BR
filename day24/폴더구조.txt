@@ -1,0 +1,10 @@
+header.html
+index.html
+CSS폴더
+    -common.css:공통css
+    -index.css: index.html
+JS폴더
+    -<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    -index.js
+    -common.js
+img폴더
