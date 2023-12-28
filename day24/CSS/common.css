@@ -21,7 +21,13 @@ a{color: black; text-decoration: none;}
     align-items: center;
     padding: 30px 0;
     border-bottom:2px solid #e8e8e8 ;
+    position: fixed;  /* 위치고정 */
+    top: 0px; /* 상단에 위치 */
+    width: 340px; background-color: white;
 }
 #header img{
     width: 70px;
+}
+#main{
+    padding: 80px 0;
 }
