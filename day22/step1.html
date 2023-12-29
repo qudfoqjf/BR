@@ -14,7 +14,7 @@
     <script>
         document.addEventListener('DOMContentLoaded',function(){
             console.log(document); //HTML을 객체화
-             //이유: 다얀한 속성/메소드를 사용하려고.[]
+             //이유: 다양한 속성/메소드를 사용하려고.[]
             console.log(document.body); //마크업(요소)를 객체로 호출
             console.log(document.body.innerHTML); // 마크업(요소)사이에 있는 HTML를 문자로 호출
             
@@ -26,10 +26,10 @@
                     // function(){}:익명함수: 이름이 없는 함수.
         document.onload=function(){
             alert('ddd');
-            document.body.innerHTML += '안녕4'
+            document.body.innerHTML += '안녕4';
         }   
         document.addEventListener('load',function(){
-            document.innerHTML += '안녕5'
+            document.innerHTML += '안녕5';
         })
        window.onload()=function(){
             document.innerHTML +='안녕6';

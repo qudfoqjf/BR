@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='manage.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/admin.css'>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script> <!-- 최신 jquery -->
+    <script src='/admin/common.js'></script>
+  
+</head>
+<body>
+
+    <div id="header"></div>
+    <!-- ==============관리자메뉴=============== -->
+    <div id="manage">
+        <h3>제품 관리</h3>
+
+        <!-- main start -->
+        <div id="manageMain">
+            <!-- 카테고리 등록 -->
+            <div id="categorySection">                
+                <h3 class="Pheader">카테고리 등록</h3>
+
+                <div id="categoryBox">
+                    <input id="inputCnum" type="text" placeholder="카테고리 고유번호"/>             
+                    <input id="inputCname" type="text" placeholder="카테고리 명"/>             
+                    <input class="btnCss" onclick="inputCategory()" type="button" value="등록">
+                </div>
+
+                <div id="categoryList">
+                    <div id="categoryHeader" class="listHead">
+                        <span class="CheadA">카테고리번호</span>
+                        <span class="CheadB">카테고리 명</span>
+                        <span class="CheadC">비고</span>
+                    </div>
+
+                    <div id="cOutput">
+
+                        
+
+                    </div>
+                </div>
+                
+            </div>
+            <!-- 카테고리 등록 end -->
+
+            <!-- 제품등록 -->
+            <div id="productSection">
+                <h3 class="Pheader">제품등록</h3>
+                
+                <div id="productBox">
+                    <!-- 등록할 제품의 카테고리 선택 -->
+                    <div id="PselectC">
+                        <select onchange="printCno(`selectCategory`, `selectCno`)" id="selectCategory">
+                            
+                        </select>
+
+                        <span>카테고리 번호 : 
+                            <input id="selectCno" type="text" readonly>
+                        </span> 
+                    </div>
+                    <!-- 등록할 제품의 카테고리 선택 end -->
+                    
+                    <!-- 제품 입력 및등록 -->
+                    <div id="writeProduct">
+                        <input id="inputPname" type="text" placeholder="제품 명"/>
+                        <input id="inputPno" type="text" placeholder="제품 번호"/>             
+                        <input id="inputPrice" type="text" placeholder="제품 가격"/>
+                        <input onchange="inputImg(event)" id="inputPimg" type="file">
+                        <input class="btnCss" onclick="inputProduct()" type="button" value="등록">
+                        <input class="btnCss" onclick="printPlist()" type="button" value="검색" />
+                    </div>                
+                    <!-- 제품 입력 및등록 end -->
+                </div>
+
+                <!-- 제품 수정/삭제 -->
+                <div id="productControl">
+                    <!-- 제품 테이블 -->
+                    <div id="pListSection">
+                        <div id="productHeader" class="listHead">                    
+                            <span class="PheadA">제품 번호</span>
+                            <span class="PheadB">제품명</span>
+                            <span class="PheadC">제품가격</span>
+                            <span class="PheadD">제품이미지</span>
+                            <span class="PheadE">비고</span>
+                        </div>
+        
+                        <!-- 제품 리스트-->
+                        <div id="plist">
+        
+                            
+        
+                        </div>
+                        <!-- 제품 리스트 end -->
+                        
+        
+                    </div>
+                    <!-- 제품 테이블 end -->
+                </div>
+                <!-- 제품 수정/삭제 end -->
+
+            </div>
+            <!-- 제품등록 end -->
+        </div>
+        <!-- main end -->
+        
+    </div>
+    <!-- ==============관리자메뉴 end=============== -->
+    
+    <script src='manage.js'></script>
+    
+  
+</body>
+</html>

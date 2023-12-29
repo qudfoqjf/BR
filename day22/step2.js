@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
             else {headers[i].style.color= 'red';}
             headers[i].textContent= i%3== 0?'3배수O':'3배수X';
             headers[i].style.backgroundColor = 'black';
-            headers[i].style.padding= '10px'
+            headers[i].style.padding= '10px';
         }
         // p.314
         const a= document.querySelector('#a');
